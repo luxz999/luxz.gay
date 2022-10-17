@@ -32,6 +32,12 @@
         Your browser does not support the audio element.
       </audio>
       <script>
+         const typed = new Typed(".typing",{
+            strings: ["........."],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop: true
+           })
         document.addEventListener("click", musicPlay);
 
         function musicPlay() {
