@@ -12,7 +12,6 @@
         <div class="luxz">
             เว็บกำลังก่อสร้าง <span class="typing"></span>
         </div>
-        <embed src="music.mp3" width="180" height="90" loop="true" autostart="true" hidden="true" />
         <style>
         .luxz{
             display: flex;
@@ -35,6 +34,12 @@
             backSpeed: 150,
             loop: true
            })
+           
+           var audio = new Audio("music.mp3");
+            window.onload = function () {
+                audio.play();
+                audio.volume = 0.5
+          }
         </script>
     </body>
 </html>
