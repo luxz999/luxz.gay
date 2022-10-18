@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mitr', sans-serif;
+}
+
+.main {
+    width:  300px;
+    height: 450px;
+    margin: 7rem auto;
+    background: #202020;
+    color: #ffff;
+    border-radius: 25px;
+    position: relative;
+}
+
+.profile {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    top: 0.6rem;
+    position: absolute;
+    z-index: 999;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);    
+}
+
+.profile img {
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #202020;
+    cursor: pointer;
+}
+
+.background {
+    height: 80px;
+    background: black;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.content {
+    text-align: center;
+    height: 180px;
+    /* border-bottom: 1px solid #e5e5e5; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+.content h1 {
+    margin: 1rem 0;
+    font-size: 25px;
+}
+
+
+.shop a{
+    border:1.6px solid #ffffff;
+    border-radius: 7px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 16px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.shop a:hover {
+    background-color: #ffffff;
+    color: #202020;
+    border-radius: 7px;
+}
+
+.info {
+    text-align: center;
+    height: 95px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer {
+    border-top: 1.3px solid #e5e5e5 ;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    width: 300px;
+}
+.footer a {
+    color: #ffffff;
+    height: 35px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease-in-out;
+}
+
+
+.footer a:hover {
+    transform: scale(2.5);
+}
+
+.facebook a{
+    font-size: 20px;
+    color: #ffffff;
+    margin-block-start: 2px;
+    margin-block-end: 5px;
+    position: absolute;
+    left: 50px;
+}
+
+.ig a{
+    font-size: 23px;
+    color: #ffffff;
+    margin-block-start: 2.5px;
+    margin-block-end: 5px;
+    position: absolute;
+    left: 110px;
+}
+
+.discord a{
+    font-size: 20px;
+    color: #ffffff;
+    margin-block-start: 2px;
+    margin-block-end: 5px;
+    position: absolute;
+    left: 170px;
+}
+
+.github a{
+    font-size: 20px;
+    color: #ffffff;
+    margin-block-start: 2px;
+    margin-block-end: 5px;
+    position: absolute;
+    left: 230px;
+}
