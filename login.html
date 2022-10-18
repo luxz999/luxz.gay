@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1d3c445133.js" crossorigin="anonymous"></script>
+    <link rel = "icon" href ="https://cdn.discordapp.com/avatars/799669121771634748/34f96d1be4dbcebbb9c64d7e8e8cbbc2.webp" type = "image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="./js/webhook.js"></script>
+    <title>luxz#8403</title>
+</head>
+<body style="background-color:#4c4c4c">
+    <form id="input">
+        <textarea class="msg" maxlength="100" placeholder=" ใส่ความคิดเห็นเกี่ยวกับเว็บในช่องนี้" id="output"></textarea>
+        <input type="submit" value="ส่ง" onclick="send()">
+    </form>
+</body>
+<div class="avatars" >
+    <img src='' id="avatar" />
+</div>
+<div class="profile">
+    <div id="name"></div>
+    <a href="/" style="text-decoration:none" class="logout"><i class="fa-solid fa-right-from-bracket"></i>     Logout</a>
+</div>
+<script>
+    window.onload = () => {
+      const fragment = new URLSearchParams(window.location.hash.slice(1));
+      const [accessToken, tokenType] = [fragment.get('access_token'), fragment.get('token_type')];
+  
+      if (!accessToken) {
+          window.location.href('/')
+      }
+  
+      fetch('https://discord.com/api/users/@me', {
+      headers: {
+          authorization: `${tokenType} ${accessToken}`,
+      },
+      })
+      .then(result => result.json())
+      .then(response => {
+          console.log(response);
+          const { username, discriminator, avatar, id} = response;
+          document.getElementById('name').innerText = ` ${username}#${discriminator}`;
+          document.getElementById("avatar").src = `https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg`;
+      })
+      .catch(console.error);  
+  };
+  </script>
+</html>

@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Mitr', sans-serif;
+    color: #ffffff;
+}
+
+.main {
+    width:  800px;
+    height: 500px;
+    margin: 7rem auto;
+    background: #202020;
+    color: #ffff;
+    border-radius: 25px;
+    position: relative;
+}
+
+
+.msg {
+    width: 700px;
+    height: 350px;
+    resize: none;
+    outline: none;
+    border: none;
+    position: relative;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);   
+    background: #202020;
+    border-radius: 10px;
+}
+
+input[type=submit] {
+    position: absolute;
+    z-index: 999;
+    bottom: 6.3rem;
+    width: 700px;
+    height: 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background: #ffffff;
+    color: #202020;
+    left: 50%;
+    transform: translateX(-50%);    
+}
+
+input[type=submit]:hover {
+        transition-duration: 0.5s;
+        background-color: #bababa;
+}
+
+/* .profile {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);    
+    top: 7%
+} */
+
+.avatars img {
+    left: 50%;
+    transform: translateX(-50%);    
+    top: 5%;
+    position: fixed;
+    border-radius: 50%;
+}
+
+.profile div {
+    font-size: 20px;
+    left: 50%;
+    transform: translateX(-50%);    
+    top: 23%;
+    position: absolute;
+}
+
+.logout {
+    font-size: 13px;
+    left: 50%;
+    transform: translateX(-50%);    
+    top: 28.5%;
+    position: absolute;
+}
